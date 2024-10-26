@@ -30,8 +30,8 @@ public class AsignaturaService {
 
 
     public List<String> obtenerEstudiantesPorLetra(String letra) {
+        // hola
         return asignaturas.stream()
-                .filter(asignatura -> !asignatura.esVirtual())
                 .flatMap(asignatura -> asignatura.getEstudiantes().stream())
                 .filter(estudiante -> estudiante.startsWith(letra) || estudiante.endsWith(letra))
                 .collect(Collectors.toList());
