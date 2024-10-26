@@ -30,7 +30,6 @@ public class AsignaturaService {
 
 
     public List<String> obtenerEstudiantesPorLetra(String letra) {
-        // hola
         return asignaturas.stream()
                 .flatMap(asignatura -> asignatura.getEstudiantes().stream())
                 .filter(estudiante -> estudiante.startsWith(letra) || estudiante.endsWith(letra))
